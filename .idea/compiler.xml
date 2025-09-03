@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Haru.domain" target="11" />
+      <module name="Haru.domain.main" target="11" />
+      <module name="Haru.domain.test" target="11" />
+      <module name="Haru.ui" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
