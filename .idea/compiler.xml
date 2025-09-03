@@ -5,7 +5,10 @@
       <module name="Haru.domain" target="11" />
       <module name="Haru.domain.main" target="11" />
       <module name="Haru.domain.test" target="11" />
+      <module name="Haru.plugin" target="11" />
       <module name="Haru.ui" target="21" />
+      <module name="plugin.main" target="21" />
+      <module name="plugin.test" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>

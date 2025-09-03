@@ -1,4 +1,9 @@
+rootProject.name = "Haru"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
+    includeBuild("plugin")
     repositories {
         google {
             content {
@@ -20,8 +25,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
-rootProject.name = "Haru"
 
 include(":app")
 includeAllUnder(path = "core", prefix = ":core:")
