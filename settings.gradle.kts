@@ -34,18 +34,18 @@ includeAllUnder(path = "feature", prefix = ":feature:")
 private fun includeAllUnder(path: String, prefix: String = "") {
     val dir = file(path)
     if (!dir.exists() || !dir.isDirectory) {
-        logger.error("⚙️[gradle] ${dir.name} does NOT exist or is not dirctory")
+        logger.error("⚙️[GRADLE] ${dir.name} does NOT exist or is not dirctory")
         return
     }
     dir.listFiles { file -> file.isDirectory && File(file, "build.gradle.kts").exists() }
         ?.apply {
             if (isEmpty()) {
-                logger.error("⚙️[gradle] No modules found under ${dir.name} directory")
+                logger.error("⚙️[SETTINGS_GRADLE] No modules found under ${dir.name} directory")
             }
         }
         ?.forEachIndexed { index, module ->
             val moduleName = "$prefix${module.name}"
-            logger.lifecycle("⚙️[gradle] ($index) include $moduleName")
+            logger.lifecycle("⚙️[SETTINGS_GRADLE] ($index) include $moduleName")
             include(moduleName)
         }
 }
