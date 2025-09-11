@@ -39,7 +39,19 @@ fun Project.android(action: BaseExtension.() -> Unit) {
     extensions.configure(action)
 }
 
-internal fun DependencyHandlerScope.implementation(
+fun DependencyHandlerScope.ksp(
+    artifact: MinimalExternalModuleDependency,
+) {
+    add("ksp", artifact)
+}
+
+fun DependencyHandlerScope.kspTest(
+    artifact: MinimalExternalModuleDependency,
+) {
+    add("kspTest", artifact)
+}
+
+fun DependencyHandlerScope.implementation(
     artifact: Dependency,
 ) {
     add("implementation", artifact)

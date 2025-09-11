@@ -1,12 +1,17 @@
 package haru.primitive
 
 import haru.debugLog
+import haru.implementation
+import haru.ksp
+import haru.library
 import haru.libs
 import haru.version
 
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp")
+    id("dagger.hilt.android.plugin")
 }
 
 kotlin {
@@ -32,4 +37,11 @@ android {
     }
 
     buildFeatures.buildConfig = true
+}
+
+dependencies {
+    implementation(libs.library("daggerHiltAndroid"))
+    ksp(libs.library("daggerHiltAndroidCompiler"))
+    // testImplementation(libs.library("daggerHiltAndroidTesting"))
+    // kspTest(libs.library("daggerHiltAndroidCompiler"))
 }

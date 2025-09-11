@@ -29,6 +29,7 @@ dependencies {
     implementation(libs.library("composeUiGraphics"))
     implementation(libs.library("composeUiToolingPreview"))
     implementation(libs.library("composeMaterial3"))
+    implementation(libs.library("hiltNavigationCompose"))
     androidTestImplementationPlatform(libs.library("composeBom"))
     androidTestImplementation(libs.library("composeUiTestJunit4"))
     debugImplementation(libs.library("composeUiTooling"))
