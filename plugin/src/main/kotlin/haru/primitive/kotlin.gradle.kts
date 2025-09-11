@@ -9,6 +9,7 @@ import haru.version
 
 plugins {
     id("org.jetbrains.kotlin.jvm")
+    id("org.jetbrains.kotlin.plugin.serialization")
     id("com.google.devtools.ksp")
 }
 
@@ -19,6 +20,7 @@ kotlin {
 }
 
 dependencies {
+    implementation(libs.library("kotlinxSerializationJson"))
     implementation(libs.library("daggerHiltCore"))
     ksp(libs.library("daggerHiltCompiler"))
     // testImplementation(libs.library("daggerHiltTesting"))
